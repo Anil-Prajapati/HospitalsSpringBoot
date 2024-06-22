@@ -36,8 +36,8 @@ public class StudentController {
 	}
 	
 	@PutMapping("/{id}/{name}/{address}")
-	public Student update(@PathVariable("id") int id,@PathVariable("name") String name,@PathVariable("address") String address) {
-		return studentService.update(id, name, address);
+	public Student update(@PathVariable("id") int id,@PathVariable("name") String name,@PathVariable("address") String address,@PathVariable("email") String email) {
+		return studentService.update(id, name, address,email);
 	}
 	
 	@DeleteMapping("/delete/{id}")

@@ -24,8 +24,9 @@ public class StudentService {
 		return studentRepository.save(student);
 	}
 	
-	public Student update(int id,String name,String address) {
+	public Student update(int id,String name,String address,String email) {
 		Student student = studentRepository.findById(id).orElse(new Student());
+		student.setEmail(email);
 		student.setName(name);
 		student.setAddress(address);
 		return studentRepository.save(student);
@@ -33,5 +34,9 @@ public class StudentService {
 	
 	public void delete(int id) {
 		studentRepository.deleteById(id);
+	}
+	
+	public Student getName(String name) {
+		return studentRepository.findByName(name);
 	}
 }

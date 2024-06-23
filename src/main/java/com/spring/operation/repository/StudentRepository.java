@@ -7,5 +7,7 @@ import jakarta.transaction.Transactional;
 
 @Transactional
 public interface StudentRepository extends JpaRepository<Student, Integer>{
+	
+	public Student findByName(String name);
 
 }

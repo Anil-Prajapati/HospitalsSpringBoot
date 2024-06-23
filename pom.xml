@@ -14,7 +14,7 @@
 	<name>SpringBootProjects</name>
 	<description>This is the spring boot projects </description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

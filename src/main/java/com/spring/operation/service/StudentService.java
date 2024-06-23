@@ -35,4 +35,8 @@ public class StudentService {
 	public void delete(int id) {
 		studentRepository.deleteById(id);
 	}
+	
+	public Student getName(String name) {
+		return studentRepository.findByName(name);
+	}
 }
